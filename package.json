@@ -1,0 +1,19 @@
+{
+  "name": "react-jobs-server",
+  "version": "1.0.0",
+  "description": "Backend APIs for my React-jobs job portal",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Ayush Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "nodemon": "^3.1.9",
+    "validator": "^13.12.0"
+  }
+}
