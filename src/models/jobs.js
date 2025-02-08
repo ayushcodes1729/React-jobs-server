@@ -9,7 +9,7 @@ const jobSchema = new Schema({
         type: String,
         required: true,
         trim: true,
-        maxLength: 20,
+        maxLength: 40,
     },
     jobType: {
         type: String,
@@ -22,7 +22,7 @@ const jobSchema = new Schema({
     jobDescription: {
         type: String,
         trim: true,
-        maxLength: 200,
+        maxLength: 300,
         default: "We are looking for a React Developer",
     },
     salary: {
@@ -60,7 +60,7 @@ const jobSchema = new Schema({
     companyDescription: {
         type: String,
         trim: true,
-        maxLength: 200,
+        maxLength: 300,
     },
     email: {
         type: String,

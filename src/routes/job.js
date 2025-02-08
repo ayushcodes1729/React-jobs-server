@@ -95,7 +95,9 @@ jobRouter.patch("/job/:jobId", async (req,res)=>{
 
 jobRouter.get("/jobs", async (req,res)=>{
     try {
-        const jobs = await Job.find().select(JOBS_VISIBLE_DATA)
+        let limit = parseInt(req.query.limit) || 10;
+        limit = limit > 50 ? 50 : limit;
+        const jobs = await Job.find().select(JOBS_VISIBLE_DATA).limit(limit);
         res.json(jobs);
     } catch (error) {
         res
