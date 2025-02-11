@@ -12,6 +12,10 @@ jobRouter.post("/job/add", async (req,res)=>{
             res.status(400).json({ error: "Missing required fields" });
         }
         const {title, jobType, salary, location, companyName, email} = req.body;
+        const existingMail = await Job.findOne({email : email})
+        if(existingMail){
+            throw new Error("E-mail already in use");
+        }
         const jobDescription = req.body.jobDescription || "";
         const companyDescription = req.body.companyDescription || "";
         const phone = req.body.phone || "";

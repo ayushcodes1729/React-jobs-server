@@ -9,7 +9,7 @@ const jobSchema = new Schema({
         type: String,
         required: true,
         trim: true,
-        maxLength: 40,
+        maxLength: 50,
     },
     jobType: {
         type: String,

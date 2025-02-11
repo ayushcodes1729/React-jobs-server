@@ -1,10 +1,15 @@
 const express = require("express");
 const connectDB = require("./config/database");
 require("dotenv").config();
+const cors = require("cors")
 
 const app = express();
 const PORT = process.env.PORT
 
+app.use(cors({
+    origin : "http://localhost:3000",
+    credentials : true
+}))
 app.use(express.json())
 
 const jobRouter = require('./routes/job')
