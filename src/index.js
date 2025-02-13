@@ -9,7 +9,7 @@ const PORT = process.env.PORT;
 app.use(
   cors({
     origin: "https://react-jobs-steel.vercel.app", // Replace with your frontend URL
-    methods: "GET,POST,PUT,DELETE", // Allowed HTTP methods
+    methods: "GET,POST,PUT,DELETE,PATCH", // Allowed HTTP methods
     credentials: true, // If using cookies or authentication headers
   })
 );
